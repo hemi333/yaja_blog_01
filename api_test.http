@@ -1,0 +1,65 @@
+### 게시글 작성 셍성 
+POST http://localhost:3333/posts
+Content-Type: application/json
+
+{
+    "password": "1234",
+    "title": "세번째",
+    "content": "테스트"
+}
+    
+    
+### 게시글 모두 조회 불러오는 (주소창)
+GET http://localhost:3333/posts
+
+### 특정 게시글 상세 조회
+GET http://localhost:3333/posts/3
+
+### 게시글 수정 
+PUT http://localhost:3333/posts/3
+Content-Type: application/json
+
+{ 
+    "password": "1234",
+    "title": "코코",
+    "content": "키키"
+}
+
+### 게시글 삭제
+DELETE http://localhost:3333/posts/3
+Content-Type: application/json
+
+{ 
+    "password": "1234"
+}
+
+### 특정 게시글의 댓글 조회
+GET http://localhost:3333/comments/1
+
+
+### 특정 게시글에 댓글 작성
+POST http://localhost:3333/comments/1
+Content-Type: application/json
+
+{
+    "password": "1234",
+    "comment": "세 번째 댓글"
+}
+
+
+### 댓글 수정
+PUT http://localhost:3333/comments/2
+Content-Type: application/json
+
+{ 
+    "password": "1234",
+    "comment": "수정은 되는데?"
+}
+
+### 댓글 삭제 
+DELETE http://localhost:3333/comments/3
+Content-Type: application/json
+
+{ 
+    "password": "1234"
+}
