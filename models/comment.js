@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.Post, {
         foreignKey: 'postId',
-        targetKey: 'postId',
+        onDelete: 'cascade',
       })
       // define association here
     }
