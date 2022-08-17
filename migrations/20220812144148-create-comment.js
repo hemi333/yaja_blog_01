@@ -9,7 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       postId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Post',
+          key: 'postId',
+        },
+        onDelete: 'cascade',
       },
       password: {
         type: Sequelize.STRING
